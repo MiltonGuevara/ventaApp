@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/models/response';
 import { ApiclienteService } from 'src/app/services/apicliente.service';
+import { DialogClienteComponent } from '../dialog/dialogCliente.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cliente',
@@ -9,7 +11,11 @@ import { ApiclienteService } from 'src/app/services/apicliente.service';
 })
 export class ClienteComponent implements OnInit {
 
-  constructor( private clientaService: ApiclienteService) { }
+  constructor( 
+    private clienteService: ApiclienteService,
+    public dialog: MatDialog
+  ) { }
+
   clientes!: Cliente[];
   columnas: string[] = ['id', 'nombre', 'telefono', 'email'];
 
@@ -19,10 +25,24 @@ export class ClienteComponent implements OnInit {
   
   getClientes(){
     
-    this.clientaService.getClientes().subscribe( respuesta =>{
+    this.clienteService.getClientes().subscribe( respuesta =>{
       console.log(respuesta.data);
       this.clientes = respuesta.data;
     });
+  }
+
+  openAdd(){
+    console.log('Agregar');
+    const dialogRef = this.dialog.open(DialogClienteComponent, {
+      width: '300',
+      
+    });
+    dialogRef.afterClosed().subscribe(() => {
+      this.clienteService.getClientes().subscribe( respuesta =>{  
+        this.clientes = respuesta.data;     
+      });
+  });
+  
   }
 
 }
