@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { HomeComponent } from './components/home/home.component';
+import { JobComponent } from './components/job/job.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/job',
     pathMatch: 'full'
   },
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'cliente', component: ClienteComponent
+  },
+  {
+    path: 'job', component: JobComponent
   }
 ];
 

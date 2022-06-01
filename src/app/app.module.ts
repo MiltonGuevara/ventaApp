@@ -16,6 +16,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DialogClienteComponent } from './components/dialog/dialogCliente.component';
+import { JobComponent } from './components/job/job.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { DialogClienteComponent } from './components/dialog/dialogCliente.compon
     AppComponent,
     HomeComponent,
     ClienteComponent,
-    DialogClienteComponent
+    DialogClienteComponent,
+    JobComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { DialogClienteComponent } from './components/dialog/dialogCliente.compon
     MatDialogModule,
     MatButtonModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
