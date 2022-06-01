@@ -1,10 +1,36 @@
+<div>
+    <h1 mat-dialog-title>Nuevo cliente</h1>
+    <div layaut-margin mat-dialog-content>
 
-<h1 mat-dialog-title >Nuevo cliente</h1>
-<div mat-dialog-content>
-    
-</div>
-<div mat-dialog-actions>
-    <button mat-button color="danger" (click)="closeDialog()">Cancelar</button>
-    <button mat-button color="primary" (click)="addCliente()" cdkFocusInitial>Aceptar</button>
-</div>
+        <form >
+            <div layaut="row">
+                <div>
+                    <mat-form-field>
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="Nombre" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Telefono" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Correo" required>
+                    </mat-form-field>
+                </div>
 
+            </div>
+
+        </form>
+    </div>
+
+    <div mat-dialog-actions>
+
+        <button mat-button color="danger" (click)="closeDialog()">Cancelar</button>
+        <button  [disabled]="" mat-button color="primary" (click)="addCliente()" cdkFocusInitial>Aceptar</button>
+
+    </div>
+
+</div>

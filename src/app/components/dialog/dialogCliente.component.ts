@@ -3,6 +3,8 @@ import { MatDialogRef } from "@angular/material/dialog";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Cliente } from "src/app/models/response";
 import { ApiclienteService } from "src/app/services/apicliente.service";
+import { NgForm } from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 
 @Component({
     selector: 'app-dialog-cliente',
