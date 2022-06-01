@@ -4,6 +4,7 @@ import { ApiclienteService } from 'src/app/services/apicliente.service';
 import { DialogClienteComponent } from '../dialog/dialogCliente.component';
 import { MatDialog } from '@angular/material/dialog';
 
+
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
@@ -34,7 +35,7 @@ export class ClienteComponent implements OnInit {
   openAdd(){
     console.log('Agregar');
     const dialogRef = this.dialog.open(DialogClienteComponent, {
-      width: '300',
+      width: '500px'
       
     });
     dialogRef.afterClosed().subscribe(() => {
