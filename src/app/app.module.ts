@@ -17,13 +17,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DialogClienteComponent } from './components/dialog/dialogCliente.component';
-<<<<<<< HEAD
 import { JobComponent } from './components/job/job.component';
 import { MatCardModule } from '@angular/material/card';
-=======
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
->>>>>>> a43cc5d35cbb3b56042e09a424b2ac307919728f
 
 
 @NgModule({
@@ -45,13 +40,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     MatInputModule,
     MatSnackBarModule,
-<<<<<<< HEAD
     MatCardModule
 
-=======
-    MatToolbarModule,
-    MatIconModule
->>>>>>> a43cc5d35cbb3b56042e09a424b2ac307919728f
   ],
   providers: [],
   bootstrap: [AppComponent]
